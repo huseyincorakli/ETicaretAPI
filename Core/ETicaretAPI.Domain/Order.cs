@@ -13,6 +13,6 @@ namespace ETicaretAPI.Domain
         public string Address { get; set; } //Value Object
         public ICollection<Product> Products{ get; set; }
         public Customer Customer{ get; set; }
-        public int CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
     }
 }
