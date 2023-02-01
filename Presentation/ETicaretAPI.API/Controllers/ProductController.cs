@@ -33,7 +33,7 @@ namespace ETicaretAPI.API.Controllers
             _orderWriteRepository = orderWriteRepository;
         }
         [HttpGet]
-        public async Task Get()
+        public async Task<IActionResult> Get()
         {
             //await _productWriteRepository.AddRangeAsync(new(){
             //    new() {  Id=Guid.NewGuid() ,Name="Product 1", CreatedDate=DateTime.UtcNow,Price=100,Stock=100 },
@@ -57,9 +57,11 @@ namespace ETicaretAPI.API.Controllers
 
             //await _orderWriteRepository.SaveAsync();
 
-            Order order= await _orderReadRepository.GetByIdAsync("d6d48626-e24d-4933-b757-38d0458a577f");
-            order.Address = "Kahramanmaraş-Doğukent";
-            await _orderWriteRepository.SaveAsync();
+            //Order order= await _orderReadRepository.GetByIdAsync("d6d48626-e24d-4933-b757-38d0458a577f");
+            //order.Address = "Kahramanmaraş-Doğukent";
+            //await _orderWriteRepository.SaveAsync();
+
+            return Ok("düdük");
 
         }
 
