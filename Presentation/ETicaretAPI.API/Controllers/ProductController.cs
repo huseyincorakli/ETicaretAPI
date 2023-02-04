@@ -26,10 +26,9 @@ namespace ETicaretAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async  Task<IActionResult> Get()
         {
             return Ok(_productReadRepository.GetAll(false));
-
         }
       
 

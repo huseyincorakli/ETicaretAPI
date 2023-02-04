@@ -41,8 +41,8 @@ namespace ETicaretAPI.Persistence.Repositories
 
         public async Task<bool> RemoveAsync(string id)
         {
-            T model = await Table.FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
-            return true;
+            T model = await Table.FirstOrDefaultAsync(data => data.Id == Guid.Parse(id));
+            return Remove(model);
         }
 
         public async Task<int> SaveAsync()
